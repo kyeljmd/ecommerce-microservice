@@ -1,0 +1,33 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "shopeepee",
+  "relationships": [
+    {
+      "relationshipName": "product",
+      "otherEntityName": "product",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "cart"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "owner",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20200821092022",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "cart",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "infinite-scroll",
+  "microserviceName": "shopeepee"
+}

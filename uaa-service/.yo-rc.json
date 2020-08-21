@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.kyeljmd.ecommerce.uaa"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "uaa",
+    "baseName": "uaa",
+    "packageName": "com.kyeljmd.ecommerce.uaa",
+    "packageFolder": "com/kyeljmd/ecommerce/uaa",
+    "serverPort": "8081",
+    "authenticationType": "uaa",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OTM4ZDMxZTMxM2MwZWZkYTc0Y2Y5NWVjMGExZTE4NjdhYmQ2MTdlZTM0NWY0ZTdlMWM2YWU3YzdhNDIwMmFmZjI3MDIwM2Y2ZTcxZWVhNTkxMWU2ODI5NjJiZWY5MjI1M2YwNDM1YmY3YTQwYTQ4YWViNDkyZWM1MjVlMDEyM2M=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1597986784320,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true
+  }
+}

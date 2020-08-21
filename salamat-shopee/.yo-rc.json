@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.kyeljmd.ecormmerce.shopeepee"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "shopeepee",
+    "packageName": "com.kyeljmd.ecormmerce.shopeepee",
+    "packageFolder": "com/kyeljmd/ecormmerce/shopeepee",
+    "serverPort": "8082",
+    "authenticationType": "uaa",
+    "uaaBaseName": "uaa",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTA1MzllNDE2YTNhMjlkNzI0MDhjNzgxOTlmODAyN2JiNzM5NmMwNTUxMWZhYzhiN2JiYWUyODQ2YzY5MDk3MTc5NzMyMjE3NWJlMzgwMDk5Zjg2MGNhMzNhMWFjNjczODRkY2Y3NmZhMjMyZmJkMzUwMjhkOWE2MGQ3ZDM4ZGE=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1597997281495,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true,
+    "lastLiquibaseTimestamp": 1598001622000
+  }
+}

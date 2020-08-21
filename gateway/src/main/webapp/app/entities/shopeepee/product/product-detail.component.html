@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="product">
+            <h2><span>Product</span> {{ product.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{ product.name }}</span>
+                </dd>
+                <dt><span>Details</span></dt>
+                <dd>
+                    <span>{{ product.details }}</span>
+                </dd>
+                <dt><span>Sku</span></dt>
+                <dd>
+                    <span>{{ product.sku }}</span>
+                </dd>
+                <dt><span>Category</span></dt>
+                <dd>
+                    <span>{{ product.category }}</span>
+                </dd>
+                <dt><span>Price</span></dt>
+                <dd>
+                    <span>{{ product.price }}</span>
+                </dd>
+                <dt><span>Stocks</span></dt>
+                <dd>
+                    <span>{{ product.stocks }}</span>
+                </dd>
+            </dl>
+
+
+            <div class="form-group">
+                <form name="cartForm" role="form"  (ngSubmit)="addToCart()" [formGroup]="cartForm">
+                <label class="form-control-label" for="field_price">Add To cart</label>
+                <input type="number" class="form-control" name="quantity" id="quantity"
+                       formControlName="quantity"/>
+                       <button type="submit"
+                       class="btn btn-primary">
+                   <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Add To Cart</span>
+               </button>
+                </form>
+            </div>
+
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/product', product.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

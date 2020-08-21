@@ -1,0 +1,54 @@
+<div>
+    <h2 id="page-heading">
+        <span>Cart</span>
+
+        <span class="float-right jh-create-entity create-cart">
+           Total: {{ totalAmountInCart }}
+        </span>
+
+
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="carts?.length === 0">
+        <span>No carts found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="carts && carts.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="reset.bind(this)">
+                    <th scope="col"  jhiSortBy="quantity"><span>Quantity</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="owner"><span>Owner</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="productId"><span>Product</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="productId"><span>Total Cost</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+                <tr *ngFor="let cart of carts ;trackBy: trackId">
+                    <td>{{ cart.quantity }}</td>
+                    <td>{{ cart.owner }}</td>
+                    <td>
+                        <div *ngIf="cart.productId">
+                            <a [routerLink]="['/product', cart.productId , 'view']" >{{ cart.productId }}</a>
+                        </div>
+                    </td>
+                    <td>{{ cart.totalPrice }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit" (click)="delete(cart)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline">Remove From Cart</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
