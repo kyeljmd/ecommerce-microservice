@@ -20,7 +20,7 @@
 
 Given the nature of the design and limitations of my machine I needed to combine the Cart Service, Product Service in Shopping-api
 
-###Set up
+### Set up
 1. Create 2 Schemas in MySQL namely uaa, and shopee
 2. Change the connection String on application.dev.yml for both uaa, and shopee
 
